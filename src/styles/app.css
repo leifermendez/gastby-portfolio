@@ -310,7 +310,7 @@ html {
 body {
     overflow-x: hidden;
     color: #3c484e;
-    background-color: #0d1219;
+    background-color: #f5f7f9;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1.5rem;
     line-height: 1.6em;
@@ -457,7 +457,7 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    color: white;
+    color: #404040;
     line-height: 1.15;
     font-weight: 700;
     text-rendering: optimizeLegibility;
@@ -533,7 +533,7 @@ h6 {
     margin: 0 auto;
     font-size: 2rem;
     line-height: 1.7em;
-    color: white;
+    color: #4c4c4c;
 }
 
 .content-body {
@@ -586,11 +586,12 @@ h6 {
     margin: 0 0 0 12px;
 }
 .post-date {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    font-weight: 300;
-    text-align: right;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+  color: gray;
 }
 
 .post-tags a {
@@ -742,13 +743,15 @@ h6 {
     color: #fff;
     background-position: center;
     background-size: cover;
+  border-top: solid 3px #2ecc71;
 }
 
 .site-nav-item {
     display: inline-block;
     padding: 5px 10px;
-    color: #fff;
-    opacity: 0.7;
+    color: #4c4c4c;
+    opacity: 0.8;
+    font-weight: 500;
 }
 
 @media (max-width: 680px) {
@@ -769,6 +772,8 @@ h6 {
 
 .site-logo {
     height: 45px;
+    opacity: .8;
+  display: none;
 }
 
 .site-header-top {
@@ -785,13 +790,14 @@ h6 {
 }
 
 .site-header-top p {
-    font-size: 16px;
-    margin: 0;
-    color: white;
+  font-size: 15px;
+  margin: 0;
+  color: #4c4c4c;
+  font-weight: 500;
 }
 
 .site-header-link {
-    margin: 0 0 0 15px;
+    margin: 0 0 0 0px;
 }
 
 @media (max-width: 680px) {
@@ -825,7 +831,7 @@ h6 {
 .site-banner-title {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: #4c4c4c;
     font-size: 4rem;
     line-height: 1.3em;
 }
@@ -850,20 +856,25 @@ h6 {
 }
 
 .site-nav-button {
-    display: inline-block;
-    padding: 5px 10px;
-    border: #fff 1px solid;
-    color: #fff;
-    font-size: 1.3rem;
-    line-height: 1em;
-    border-radius: var(--radius);
-    opacity: 0.7;
-    margin: 0 0 0 .8em;
+  display: inline-block;
+  padding: 5px 10px;
+  border: #f1f1f1 1px solid;
+  color: #484848;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1em;
+  border-radius: var(--radius);
+  opacity: 0.7;
+  margin: 0 0 0 .8em;
+  background-color: #f5f7f9;
+  box-shadow: 0 0 5px rgba(136, 136, 136, 0.16);
+
 }
 
 .site-nav-button:hover {
     text-decoration: none;
-    background-color: #1c2938;
+  background-color: #2ecc71;
+  color: white;
 }
 
 /* Main
@@ -887,6 +898,7 @@ h6 {
     justify-content: space-between;
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
+
 }
 
 @media (max-width: 980px) {
@@ -904,13 +916,19 @@ h6 {
     text-decoration: none;
     box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
     border-radius: 5px;
-    background-color: #141f2d;
-    color: white;
+    background-color: #ffffff;
+    color: #353535;
 }
 
 .post-card:hover {
     text-decoration: none;
+    -webkit-transition: all 100ms ease-out ;
+    -moz-transition: all 100ms ease-out ;
+    -o-transition: all 100ms ease-out ;
+    transition: all 100ms ease-out;
+  transform: scale(1.03)
 }
+
 
 .post-card-tags {
     margin: 0 0 5px 0;
@@ -940,7 +958,7 @@ h6 {
 .post-card-title {
     margin: 0 0 10px 0;
     padding: 0 .8em;
-    color: white;
+    color: #4c4c4c;
 }
 
 .post-card-excerpt {
@@ -1125,10 +1143,10 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-foot {
-    padding: 20px 0 40px 0;
-    color: rgba(255,255,255,0.7);
-    font-size: 1.3rem;
-    background: #1c2938;
+  padding: 20px 0 40px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.3rem;
+  background: #2ecc71;
 }
 
 .site-foot-nav {

@@ -15,7 +15,7 @@ try {
     }
   };
 } finally {
-  const { apiUrl, contentApiKey } = process.env.NODE_ENV === 'development' ? ghostConfig.development : ghostConfig.production;
+  const {apiUrl, contentApiKey} = process.env.NODE_ENV === 'development' ? ghostConfig.development : ghostConfig.production;
 
   if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
     throw new Error(`GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build. Check the README.`) // eslint-disable-line
@@ -23,12 +23,12 @@ try {
 }
 
 /**
-* This is the place where you can tell Gatsby which plugins to use
-* and set them up the way you want.
-*
-* Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
-*
-*/
+ * This is the place where you can tell Gatsby which plugins to use
+ * and set them up the way you want.
+ *
+ * Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
+ *
+ */
 module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl
@@ -50,6 +50,17 @@ module.exports = {
         name: 'images'
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'limelight',
+          // eslint-disable-next-line no-useless-escape
+          'source sans pro\:300,400,400i,700' // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -60,8 +71,8 @@ module.exports = {
           ghostConfig.production
     },
     /**
-         *  Utility Plugins
-         */
+     *  Utility Plugins
+     */
     {
       resolve: 'gatsby-plugin-ghost-manifest',
       options: {
@@ -174,14 +185,6 @@ module.exports = {
         ],
         createLinkInHead: true,
         addUncaughtPages: true
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-sentry',
-      options: {
-        dsn: 'https://7b3790a56b724e688b273ee0d17184a5@sentry.io/1553312',
-        environment: process.env.NODE_ENV,
-        enabled: (() => ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)()
       }
     },
     'gatsby-plugin-catch-links',

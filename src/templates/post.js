@@ -10,7 +10,7 @@ import Disqus from 'disqus-react';
 
 const Post = ({ data, location }) => {
   const post = data.ghostPost;
-  const disqusShortname = 'arepadev';
+  const disqusShortname = 'leifermendez-github-io';
   const disqusConfig = {
     url: `https://arepa.dev/${post.slug}/`,
     identifier: post.id,
@@ -45,8 +45,8 @@ const Post = ({ data, location }) => {
                   <img src={post.feature_image} alt={post.title} />
                 </figure>
                 <div className="post-author-profile">
-                  <h2>Oscar Barajas Tavares</h2>
-                  <p>Frontend & Foundation Layer at @platzi #education - Lead at Developer Circles from Facebook, ReactJS, Speaker & Blogger. I teach ReactJS in @platzi - 🇲🇽🇨🇴</p>
+                  <h2>Leifer Mendez</h2>
+                  <p>Experto en desarrollo tecnológico tanto en back como en frontend. 8 años de experiencia trabajando para numerosas empresas actualmente liderando un equipo.</p>
                 </div>
                 <div className="post-tags">
                   {post.tags.map((tag, index) => (
@@ -60,12 +60,12 @@ const Post = ({ data, location }) => {
                   ))}
                 </div>
                 <div className="post-follow">
-                  <a href="https://twitter.com/gndx" target="_blank" rel="noopener noreferrer">
-                    <img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /> Sígueme @gndx
+                  <a href="https://twitter.com/leifermendez" target="_blank" rel="noopener noreferrer">
+                    <img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /> Sígueme @leifermendez
                   </a>
                 </div>
                 <div className="post-coffee">
-                  <a href="https://www.buymeacoffee.com/CadfbPu" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.buymeacoffee.com/leifermendez" target="_blank" rel="noopener noreferrer">
                     <img src="https://cdn.buymeacoffee.com/buttons/lato-black.png" alt="Buy Me A Coffee" />
                   </a>
                 </div>

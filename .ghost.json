@@ -1,12 +1,12 @@
 {
   "development": {
-    "apiUrl": "https://arepadev.herokuapp.com",
-    "contentApiKey": "34425698d28cfb18c3d8176ce7",
+    "apiUrl": "https://leifer-blog.herokuapp.com",
+    "contentApiKey": "09fd5a2350b0911ceb4331ee53",
     "version": "v2"
   },
   "production": {
-    "apiUrl": "https://arepadev.herokuapp.com",
-    "contentApiKey": "34425698d28cfb18c3d8176ce7",
+    "apiUrl": "https://leifer-blog.herokuapp.com",
+    "contentApiKey": "09fd5a2350b0911ceb4331ee53",
     "version": "v2"
   }
 }

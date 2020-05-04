@@ -2,21 +2,21 @@ import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
-import { Navigation } from '.';
+import {Link, StaticQuery, graphql} from 'gatsby';
+import {Navigation} from '.';
 
 import '../../styles/app.css';
 
-const DefaultLayout = ({ data, children, bodyClass }) => {
+const DefaultLayout = ({data, children, bodyClass}) => {
   const site = data.allGhostSettings.edges[0].node;
   const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, '')}` : null;
   const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, '')}` : null;
   return (
     <>
       <Helmet>
-        <html lang={site.lang} />
+        <html lang={site.lang}/>
         <style type="text/css">{`${site.codeinjection_styles}`}</style>
-        <body className={bodyClass} />
+        <body className={bodyClass}/>
       </Helmet>
       <div className="viewport">
         <div className="viewport-top">
@@ -27,31 +27,42 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
                   <Link to="/">
                     {site.logo ?
                       <div className="site-header-top">
-                        <img className="site-logo" src={site.logo} alt={site.title} />
+                        <img className="site-logo" src={site.logo} alt={site.title}/>
                         <div className="site-header-link">
                           <h1 className="site-banner-title">{site.title}</h1>
                           <p className="site-banner-desc">{site.description}</p>
                         </div>
                       </div> :
-                      <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
+                      <Img fixed={data.file.childImageSharp.fixed} alt={site.title}/>
                     }
                   </Link>
                 </div>
                 <div className="site-mast-right">
-                  {site.twitter && <a href={twitterUrl} className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
-                  {site.facebook && <a href={facebookUrl} className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
-                  <a className="site-nav-item" href="https://github.com/gndx" target="_blank" rel="noopener noreferrer">
-                    <img className="site-nav-icon" src="/images/icons/github.png" alt="Oscar Barajas Tavares - Github" />
+                  {site.twitter &&
+                  <a href={twitterUrl} className="site-nav-item" target="_blank" rel="noopener noreferrer"><img
+                    className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter"/></a>}
+                  {site.facebook &&
+                  <a href={facebookUrl} className="site-nav-item" target="_blank" rel="noopener noreferrer"><img
+                    className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook"/></a>}
+                  <a className="site-nav-item" href="https://www.linkedin.com/in/leifermendez/" target="_blank"
+                     rel="noopener noreferrer">
+                    <img className="site-nav-icon" src="/images/icons/linkedin.svg" alt="Leifer Mendez - Github"/>
                   </a>
+                  <a className="site-nav-item" href="https://github.com/leifermendez" target="_blank"
+                     rel="noopener noreferrer">
+                    <img className="site-nav-icon" src="/images/icons/github.svg" alt="Leifer Mendez - Github"/>
+                  </a>
+
                 </div>
               </div>
               <nav className="site-nav">
                 <div className="site-nav-left">
-                  <Navigation data={site.navigation} navClass="site-nav-item" />
+                  <Navigation data={site.navigation} navClass="site-nav-item"/>
                 </div>
                 <div className="site-nav-right">
                   <Link className="site-nav-button" to="/about">Acerca</Link>
-                  <a className="site-nav-button" href="https://www.youtube.com/channel/UCw05fUBPwmpu-ehXFMqfdMw" target="_blank" without rel="noopener noreferrer">Youtube</a>
+                  <a className="site-nav-button" href="https://www.youtube.com/channel/UCgrIGp5QAnC0J8LfNJxDRDw"
+                     target="_blank" without rel="noopener noreferrer">Youtube</a>
                 </div>
               </nav>
             </div>
@@ -64,10 +75,10 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
           <footer className="site-foot">
             <div className="site-foot-nav container">
               <div className="site-foot-nav-left">
-                Hecho con Amor desde Colombia 🇨🇴
+                ♥ Open Source
               </div>
               <div className="site-foot-nav-right">
-                <Navigation data={site.navigation} navClass="site-foot-nav-item" />
+                <Navigation data={site.navigation} navClass="site-foot-nav-item"/>
               </div>
             </div>
           </footer>
